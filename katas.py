@@ -1,11 +1,11 @@
-def find_fib(n):
-    if n == 1 or n == 2:
+def find_fib(number):
+    if number == 1 or number == 2:
         return 1
     else:
         counter = 3
         prev = 1
         curr = 1
-        while counter <= n:
+        while counter <= number:
             temp = prev
             prev = curr
             curr = temp + prev
@@ -14,28 +14,28 @@ def find_fib(n):
 
 print(find_fib(8))
 
-def fib(n):
-    if n == 1 or n == 2:
+def fib(number):
+    if number <= 2:
         return 1
     else:
-            return fib(n - 1) + fib(n - 2)
+            return fib(number - 1) + fib(number - 2)
 
 print(fib(8))
 
-def factorialNonRecursive(n):
+def factorialNonRecursive(number):
     counter = 1
     answer = 1
-    while counter <= n:
+    while counter <= number:
         answer *= counter
         counter += 1
     return answer
 
 print(factorialNonRecursive(6))
 
-def factorial(n):
-    if n == 1: # base case
-        return n
+def factorial(number):
+    if number == 1: # base case
+        return number
     else:      # recursive step
-        return n * factorial(n - 1)
+        return number * factorial(number - 1)
 
 print(factorial(6))
